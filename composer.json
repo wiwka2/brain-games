@@ -1,0 +1,24 @@
+{
+    "name": "hexlet/code",
+    "description": "5 shell powered math games, first php study project",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "wiwka2",
+            "email": "dimkaakadiem@gmail.com"
+        }
+    ],
+    "require": {},
+    "bin": [
+        "bin/brain-games",
+        "bin/brain-even",
+        "bin/brain-calc",
+        "bin/brain-gcd",
+        "bin/brain-progression",
+        "bin/brain-prime"
+    ]
+}
