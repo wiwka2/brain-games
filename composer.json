@@ -3,6 +3,9 @@
     "description": "5 shell powered math games, first php study project",
     "license": "MIT",
     "autoload": {
+        "files": [
+            "src/Cli.php"
+        ],
         "psr-4": {
             "Hexlet\\Code\\": "src/"
         }
@@ -13,7 +16,9 @@
             "email": "dimkaakadiem@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "^0.12.1"
+    },
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
