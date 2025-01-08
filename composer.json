@@ -4,7 +4,9 @@
     "license": "MIT",
     "autoload": {
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/GameEngine.php",
+            "src/Games/Even.php"
         ],
         "psr-4": {
             "Hexlet\\Code\\": "src/"
