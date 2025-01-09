@@ -10,5 +10,6 @@ if (file_exists($autoloadPath1)) {
 }
 
 use function Php\Project\Game\Games\Even\gameEven;
+use function Php\Project\GameEngine\runGame;
 
-gameEven(); 
+runGame(gameEven()[0], gameEven()[1]); 
