@@ -2,7 +2,6 @@
 
 namespace Php\Project\Games\Even;
 
-use function Php\Project\GameEngine\runGame;
 use const Php\Project\GameEngine\ROUNDS_COUNT;
 use const Php\Project\GameEngine\MIN_NUMBER;
 use const Php\Project\GameEngine\MAX_NUMBER;
