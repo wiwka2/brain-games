@@ -9,7 +9,7 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function Php\Project\Games\Even\gameEven;
+use function Php\Project\Games\Calc\gameCalc;
 use function Php\Project\GameEngine\runGame;
 
-runGame(gameEven()[0], gameEven()[1]); 
+runGame(gameCalc()[0], gameCalc()[1]); 

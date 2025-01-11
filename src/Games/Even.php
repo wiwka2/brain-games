@@ -1,8 +1,11 @@
 <?php
 
-namespace Php\Project\Game\Games\Even;
+namespace Php\Project\Games\Even;
 
 use function Php\Project\GameEngine\runGame;
+use const Php\Project\GameEngine\ROUNDS_COUNT;
+use const Php\Project\GameEngine\MIN_NUMBER;
+use const Php\Project\GameEngine\MAX_NUMBER;
 
 function isEven(int $number): bool
 {
@@ -12,13 +15,10 @@ function isEven(int $number): bool
 function gameEven()
 {
     $gameRules = "Answer \"yes\" if the number is even, otherwise answer \"no\".\n";
-    $minNumber = 1;
-    $maxNumber = 100;
-    $roundsCount = 3;
     $gameData = [];
 
-    for ($i = 0; $i < $roundsCount; $i++) {
-        $question = rand($minNumber, $maxNumber);
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
+        $question = rand(MIN_NUMBER, MAX_NUMBER);
         $correctAnswer = isEven($question) ? 'yes' : 'no';  
     
         $gameData [] = [

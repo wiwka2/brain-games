@@ -7,7 +7,8 @@ It's built on the principle of popular mobile applications for brain pumping. Ea
 Games:
 1. Even/Odd  
 ![Demo record](/demos/brain-even-demo.gif)
-1. Calculator
+1. Calculator  
+![Demo record](/demos/brain-calc-demo.gif)
 1. Greatest common divisor
 1. Progression
 1. Prime number 
