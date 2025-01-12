@@ -17,7 +17,7 @@ function gameCalc()
         $operators = ['+', '-', '*'];
         $randOperator = $operators[rand(0, 2)];
         $question = "{$firstNumber} {$randOperator} {$secondNumber}";
-        
+
         switch ($randOperator) {
             case '+':
                 (string)$correctAnswer = $firstNumber + $secondNumber;
@@ -35,5 +35,5 @@ function gameCalc()
             'correctAnswer' => $correctAnswer];
     }
 
-    return $result = [$gameRules, $gameData];
+    return [$gameRules, $gameData];
 }

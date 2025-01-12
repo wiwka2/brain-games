@@ -8,7 +8,8 @@
             "src/GameEngine.php",
             "src/Games/Even.php",
             "src/Games/Calc.php",
-            "src/Games/GCD.php"
+            "src/Games/GCD.php",
+            "src/Games/Progression.php"
         ],
         "psr-4": {
             "Hexlet\\Code\\": "src/"
@@ -29,9 +30,7 @@
         "bin/brain-calc",
         "bin/brain-gcd",
         "bin/brain-progression",
-        "bin/brain-prime",
-        "bin/phpcs",
-        "bin/phpcbf"
+        "bin/brain-prime"
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.11"

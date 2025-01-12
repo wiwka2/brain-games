@@ -11,5 +11,7 @@ Games:
 ![Demo record](/demos/brain-calc-demo.gif)
 1. Greatest common divisor  
 ![Demo record](/demos/brain-gcd-demo.gif)
-1. Progression
-1. Prime number 
+1. Progression  
+![Demo record](/demos/brain-progression-demo.gif)
+1. Prime number  
+![Demo record](/demos/brain-prime-demo.gif)

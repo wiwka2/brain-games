@@ -18,11 +18,11 @@ function gameEven()
 
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $question = rand(MIN_NUMBER, MAX_NUMBER);
-        $correctAnswer = isEven($question) ? 'yes' : 'no';  
-    
+        $correctAnswer = isEven($question) ? 'yes' : 'no';
+
         $gameData [] = [
             'question' => $question,
             'correctAnswer' => $correctAnswer];
     }
-    return $result = [$gameRules, $gameData];
+    return [$gameRules, $gameData];
 }

@@ -6,13 +6,14 @@ use const Php\Project\GameEngine\ROUNDS_COUNT;
 use const Php\Project\GameEngine\MIN_NUMBER;
 use const Php\Project\GameEngine\MAX_NUMBER;
 
-function gcd($a,$b) {
-    return ($a % $b) ? gcd($b,$a % $b) : $b;
+function gcd($a, $b)
+{
+    return ($a % $b) ? gcd($b, $a % $b) : $b;
 }
 
 function gameGcd()
 {
-    $gameRules = "Find the greatest common divisor of given numbers.";
+    $gameRules = "Find the greatest common divisor of given numbers.\n";
     $gameData = [];
 
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
@@ -27,5 +28,5 @@ function gameGcd()
             'correctAnswer' => $correctAnswer];
     }
 
-    return $result = [$gameRules, $gameData];
+    return [$gameRules, $gameData];
 }
