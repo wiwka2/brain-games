@@ -2,8 +2,8 @@
 
 namespace Php\Project\GameEngine;
 
-use function Cli\line;
-use function Cli\prompt;
+use function cli\line;
+use function cli\prompt;
 
 const ROUNDS_COUNT = 3;
 const MIN_NUMBER = 1;
