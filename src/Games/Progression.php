@@ -32,7 +32,7 @@ function makeCensoredProgression()
     $censoredProgression = $progression;
     $censoredNumber = $censoredProgression[$randKey];
     $censoredProgression[$randKey] = "..";
-    
+
     return [$censoredNumber, $censoredProgression];
 }
 
@@ -44,7 +44,7 @@ function gameProgression()
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $numberAndProgression = makeCensoredProgression();
         $censoredNumber = $numberAndProgression[0];
-        $modifiedProgression = implode (' ', $numberAndProgression[1]);
+        $modifiedProgression = implode(' ', $numberAndProgression[1]);
         $question = "{$modifiedProgression}";
         $correctAnswer = $censoredNumber;
 
