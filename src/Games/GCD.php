@@ -6,9 +6,9 @@ use const Php\Project\GameEngine\ROUNDS_COUNT;
 use const Php\Project\GameEngine\MIN_NUMBER;
 use const Php\Project\GameEngine\MAX_NUMBER;
 
-function gcd($a, $b)
+function gcd(int $a, int $b)
 {
-    return ($a % $b) ? gcd($b, $a % $b) : $b;
+    return ($a % $b) !== 0 ? gcd($b, $a % $b) : $b;
 }
 
 function gameGcd()

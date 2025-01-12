@@ -6,7 +6,7 @@ use const Php\Project\GameEngine\ROUNDS_COUNT;
 use const Php\Project\GameEngine\MIN_NUMBER;
 use const Php\Project\GameEngine\MAX_NUMBER;
 
-function isPrime($number)
+function isPrime(int $number)
 {
     if ($number == 2) {
             return true;

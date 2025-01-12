@@ -9,7 +9,7 @@ const ROUNDS_COUNT = 3;
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
 
-function runGame($gameRules, $gameData): void
+function runGame(string $gameRules, array $gameData): void
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
