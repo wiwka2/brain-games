@@ -28,5 +28,5 @@ function runGame($gameRules, $gameData): void
             return;
         }
     }
-        line('Congratulations, %s', $name);
+        line('Congratulations, %s!', $name);
 }
