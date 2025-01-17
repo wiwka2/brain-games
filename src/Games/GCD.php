@@ -33,4 +33,3 @@ function gcd(int $a, int $b): int
 {
     return ($a % $b) !== 0 ? gcd($b, $a % $b) : $b;
 }
-

@@ -29,11 +29,11 @@ function runGamePrime(): void
 
 function isPrime(int $number): bool
 {
+    if ($number % 2 == 0 || $number < 2) {
+        return false;
+    }
     if ($number == 2) {
         return true;
-    }
-    if ($number % 2 == 0) {
-        return false;
     }
     $i = 3;
     $max_factor = (int)sqrt($number);
@@ -45,4 +45,3 @@ function isPrime(int $number): bool
     }
     return true;
 }
-

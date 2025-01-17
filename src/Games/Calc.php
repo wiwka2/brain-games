@@ -19,7 +19,7 @@ function runGameCalc(): void
         $operators = ['+', '-', '*'];
         $randOperator = $operators[array_rand($operators, 1)];
         $question = "{$firstNumber} {$randOperator} {$secondNumber}";
-        $correctAnswer = calculate($firstNumber, $secondNumber, $randOperator);       
+        $correctAnswer = calculate($firstNumber, $secondNumber, $randOperator);
 
         $gameData [] = [
             'question' => $question,
