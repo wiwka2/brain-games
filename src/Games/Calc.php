@@ -2,38 +2,48 @@
 
 namespace Php\Project\Games\Calc;
 
+use function Php\Project\GameEngine\runGameEngine;
+
 use const Php\Project\GameEngine\ROUNDS_COUNT;
 use const Php\Project\GameEngine\MIN_NUMBER;
 use const Php\Project\GameEngine\MAX_NUMBER;
 
-function gameCalc()
+function runGameCalc(): void
 {
-    $gameRules = "What is the result of the expression?\n";
+    $gameRules = "What is the result of the expression?";
     $gameData = [];
 
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $firstNumber = rand(MIN_NUMBER, MAX_NUMBER);
         $secondNumber = rand(MIN_NUMBER, MAX_NUMBER);
         $operators = ['+', '-', '*'];
-        $randOperator = $operators[rand(0, 2)];
+        $randOperator = $operators[array_rand($operators, 1)];
         $question = "{$firstNumber} {$randOperator} {$secondNumber}";
-
-        switch ($randOperator) {
-            case '+':
-                (string)$correctAnswer = $firstNumber + $secondNumber;
-                break;
-            case '-':
-                (string)$correctAnswer = $firstNumber - $secondNumber;
-                break;
-            case '*':
-                (string)$correctAnswer = $firstNumber * $secondNumber;
-                break;
-        }
+        $correctAnswer = calculate($firstNumber, $secondNumber, $randOperator);       
 
         $gameData [] = [
             'question' => $question,
-            'correctAnswer' => $correctAnswer];
+            'correctAnswer' => $correctAnswer
+        ];
     }
 
-    return [$gameRules, $gameData];
+    runGameEngine($gameRules, $gameData);
+}
+
+function calculate(int $firstNumber, int $secondNumber, string $operator): int
+{
+    switch ($operator) {
+        case '+':
+            $answer = $firstNumber + $secondNumber;
+            break;
+        case '-':
+            $answer = $firstNumber - $secondNumber;
+            break;
+        case '*':
+            $answer = $firstNumber * $secondNumber;
+            break;
+        default:
+            return 0;
+    }
+    return $answer;
 }

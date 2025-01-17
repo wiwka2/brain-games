@@ -9,12 +9,12 @@ const ROUNDS_COUNT = 3;
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 100;
 
-function runGame(string $gameRules, array $gameData): void
+function runGameEngine(string $gameRules, array $gameData): void
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line($gameRules);
+    line("%s\n", $gameRules);
 
     foreach ($gameData as $round) {
         line('Question: %s', $round['question']);
@@ -22,11 +22,11 @@ function runGame(string $gameRules, array $gameData): void
 
         if ($answer == $round['correctAnswer']) {
             line('Correct!');
-        } else {
-            line('%s is wrong answer ;(. Correct answer was %s.', $answer, $round['correctAnswer']);
-            line('Let\'s try again, %s!', $name);
-            return;
+            continue;
         }
+        line('%s is wrong answer ;(. Correct answer was %s.', $answer, $round['correctAnswer']);
+        line('Let\'s try again, %s!', $name);
+        return;
     }
         line('Congratulations, %s!', $name);
 }

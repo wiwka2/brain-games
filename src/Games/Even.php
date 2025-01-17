@@ -2,16 +2,13 @@
 
 namespace Php\Project\Games\Even;
 
+use function Php\Project\GameEngine\runGameEngine;
+
 use const Php\Project\GameEngine\ROUNDS_COUNT;
 use const Php\Project\GameEngine\MIN_NUMBER;
 use const Php\Project\GameEngine\MAX_NUMBER;
 
-function isEven(int $number): bool
-{
-    return $number % 2 === 0;
-}
-
-function gameEven()
+function runGameEven(): void
 {
     $gameRules = "Answer \"yes\" if the number is even, otherwise answer \"no\".\n";
     $gameData = [];
@@ -22,7 +19,15 @@ function gameEven()
 
         $gameData [] = [
             'question' => $question,
-            'correctAnswer' => $correctAnswer];
+            'correctAnswer' => $correctAnswer
+        ];
     }
-    return [$gameRules, $gameData];
+
+    runGameEngine($gameRules, $gameData);
 }
+
+function isEven(int $number): bool
+{
+    return $number % 2 === 0;
+}
+
